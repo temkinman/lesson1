@@ -22,13 +22,19 @@ gipotenuza = arr.sort.max
 
 arr.pop
 
-side_a = arr[0].round
-side_b = arr[1].round
+side_a = arr[0].round(1)
+side_b = arr[1].round(1)
 
-if (gipotenuza*gipotenuza).ceil == side_a*side_a + side_b*side_b
-	puts "Этот треугольник прямоугольный" 
+if gipotenuza - Math.sqrt(side_a*side_a + side_b*side_b).round(2) <= 0.09  # тут не знал как правильно работать с округлениями и решил так 
+                                                     # вычел от того что ввел пользователь результат теоремы Пифагора т.к. 
+                                                     # теряются после round(2) иногда 0,01 и более.
+	print "Этот треугольник прямоугольный" 
 	
-	if side_a == side_b
-	puts "еще и равнобедренный"
-	end
+	puts " еще и равнобедренный" if side_a == side_b
+	
+elsif side_a == side_b && side_a == gipotenuza
+  puts "Этот треугольник равносторонний, но непрямоугольный" 
+
+else
+  puts "Этот треугольник непрямоугольный" 
 end

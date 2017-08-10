@@ -2,10 +2,10 @@
 #Программа должна запрашивать основание и высоту треуголиника и возвращать его площадь.
 
 puts "Введите основание треугольника"
-base = gets.to_i
+base = gets.to_f
 
 puts "Введите высоту треугольника"
-height = gets.to_i
+height = gets.to_f
 
-square = 0,5 * base * height
-puts "Площадь треугольника - #{square}"
+square = base * height * 0.5
+puts "Площадь треугольника - #{square.round(2)}"
