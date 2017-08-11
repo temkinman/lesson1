@@ -17,13 +17,16 @@ c = gets.to_f
 
 d = b*b - 4*a*c
 
-x1 = (-b + Math.sqrt(d))/(2*a)
-x2 = (-b - Math.sqrt(d))/(2*a)
-
 if d > 0
-	puts "дискриминант - #{d}, корень_1 - #{x1.round(2)}, корень_2 - #{x2.round(2)}"
+  x1 = (-b + Math.sqrt(d))/(2*a)
+  x2 = (-b - Math.sqrt(d))/(2*a)
+
+  puts "дискриминант - #{d}, корень_1 - #{x1.round(2)}, корень_2 - #{x2.round(2)}"
+
 elsif d == 0
-	puts "дискриминант - #{d}, корни равны - #{x1.round(2)}"
+  x1 = -b/(2*a)
+  puts "дискриминант - #{d}, корни равны - #{x1.round(2)}"
+
 else
-	puts "Корней нет"
+  puts "Корней нет"
 end

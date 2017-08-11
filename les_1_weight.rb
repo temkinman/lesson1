@@ -7,7 +7,7 @@ growth = gets.to_i
 pefect_weight = growth - 110
 
 if pefect_weight < 0
-	puts "#{name.capitalize}, Ваш вес оптимальный" 
+  puts "#{name.capitalize}, Ваш вес оптимальный" 
 else
-	puts "#{name.capitalize}, Ваш идеальный вес - #{pefect_weight}кг"
+  puts "#{name.capitalize}, Ваш идеальный вес - #{pefect_weight}кг"
 end
